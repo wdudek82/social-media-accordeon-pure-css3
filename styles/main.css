@@ -12,8 +12,8 @@ body {
 @font-face {
   font-family: 'Genericons';
   src:
-    url('fonts/genericons-regular-webfont.woff') format('woff'),
-    url('fonts/genericons-regular-webfont.eot') format('truetype');
+    url('/fonts/genericons-regular-webfont.woff')format('woff'),
+    url('/fonts/genericons-regular-webfont.eot')format('truetype');
 }
 
 .container {
@@ -28,14 +28,28 @@ header h1 {
 }
 
 .accordion {
-  /* display: block; */
   display: flex;
+  flex-direction: column;
   list-style: none;
   background: #333;
   width: 100%;
-  min-width: 800px;
-  height: 200px;
+  min-width: 300px;
+  height: 1200px;
   font-size: 0;
+}
+
+@media (min-width: 900px) {
+  .container {
+    margin: 50px auto;
+    width: 90%;
+  }
+
+  .accordion {
+    flex-direction: row;
+    width: 100%;
+    min-width: 800px;
+    height: 200px;
+  }
 }
 
 .tab {
@@ -55,12 +69,20 @@ header h1 {
   width: 450px;
 }
 
+.tab:hover .social a:before {
+  margin-left: -100px;
+}
+
+.tab:hover .social a:after {
+  margin-left: 0;
+}
+
 .tab .content {
   position: relative;
   background: #fff;
-  width: 360px;
+  width: 350px;
   height: 200px;
-  margin-left: 90px;
+  margin-left: 80px;
   padding: 50px 0 0 15px;
 }
 
@@ -73,4 +95,101 @@ header h1 {
   font-size: 0.8rem;
   line-height: 1.4rem;
   padding-right: 30px;
+}
+
+.social a:before,
+.social a:after {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+  width: 200px;
+  height: 80px;;
+  position: absolute;
+  text-indent: 0;
+  font: normal 30px Genericons;
+  color: #fff;
+  transition: margin-left 0.4s ease-in-out 0.1s;
+}
+
+.social a:after {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+  font-size: 48px;
+  margin-left: 85px;
+}
+
+@media (min-width: 900px) {
+  .social a:before,
+  .social a:after {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+    width: 80px;
+    height: 200px;;
+    position: absolute;
+    text-indent: 0;
+    font: normal 30px Genericons;
+    color: #fff;
+    transition: margin-left 0.4s ease-in-out 0.1s;
+  }
+}
+
+/* Add Icons */
+.youtube a:before,
+.youtube a:after {
+  content: '\f213';
+}
+
+.youtube a:after {
+  background: #f00;
+}
+
+.twitter a:before,
+.twitter a:after {
+  content: '\f202';
+}
+
+.twitter a:after {
+  background: #6dc5dd;
+}
+
+.facebook a:before,
+.facebook a:after {
+  content: '\f203';
+}
+
+.facebook a:after {
+  background: #3b5998;
+}
+
+.linkedin a:before,
+.linkedin a:after {
+  content: '\f208';
+}
+
+.linkedin a:after {
+  background: #00a9cd;
+}
+
+.instagram a:before,
+.instagram a:after {
+  content: '\f215';
+}
+
+.instagram a:after {
+  background: #6dc993;
+}
+
+.github a:before,
+.github a:after {
+  content: '\f200';
+}
+
+.github a:after {
+  background: #6e5494;
 }
