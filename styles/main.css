@@ -32,7 +32,6 @@ header h1 {
   display: flex;
   list-style: none;
   background: #333;
-  color: #fff;
   width: 100%;
   min-width: 800px;
   height: 200px;
@@ -47,8 +46,8 @@ header h1 {
   border-right: 1px solid #333;
   width: 80px;
   height: 100%;
-  /* overflow: hidden; */
-  transition: width 0.3s ease-out;
+  overflow: hidden;
+  transition: width 0.5s ease-in-out 0.1s;
 }
 
 .tab:hover,
@@ -56,15 +55,22 @@ header h1 {
   width: 450px;
 }
 
-.social {
+.tab .content {
+  position: relative;
+  background: #fff;
+  width: 360px;
+  height: 200px;
+  margin-left: 90px;
+  padding: 50px 0 0 15px;
 }
 
-.social .content {
-  width: 0;
-  overflow: hidden;
+.tab .content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
 }
 
-.social:hover,
-.social:focus {
-  overflow: auto;
+.tab .content p {
+  font-size: 0.8rem;
+  line-height: 1.4rem;
+  padding-right: 30px;
 }
