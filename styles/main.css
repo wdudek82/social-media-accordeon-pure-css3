@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  background: #222;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@font-face {
+  font-family: 'Genericons';
+  src:
+    url('fonts/genericons-regular-webfont.woff') format('woff'),
+    url('fonts/genericons-regular-webfont.eot') format('truetype');
+}
+
+.container {
+  margin: 50px auto;
+  width: 90%;
+}
+
+header h1 {
+  color: #fff;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.accordion {
+  /* display: block; */
+  display: flex;
+  list-style: none;
+  background: #333;
+  color: #fff;
+  width: 100%;
+  min-width: 800px;
+  height: 200px;
+  font-size: 0;
+}
+
+.tab {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: #444;
+  border-right: 1px solid #333;
+  width: 80px;
+  height: 100%;
+  /* overflow: hidden; */
+  transition: width 0.3s ease-out;
+}
+
+.tab:hover,
+.tab:focus-within {
+  width: 450px;
+}
+
+.social {
+}
+
+.social .content {
+  width: 0;
+  overflow: hidden;
+}
+
+.social:hover,
+.social:focus {
+  overflow: auto;
+}
